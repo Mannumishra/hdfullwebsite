@@ -10,7 +10,7 @@ const AllProduct = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("http://localhost:7000/v1/get-card-details")
+            const res = await axios.get("https://api.limitincrease.tech/v1/get-card-details")
             console.log(res)
             if (res.status === 200) {
                 const newdata = res.data.data
@@ -27,7 +27,7 @@ const AllProduct = () => {
 
     const deleteCardDetails = async (id) => {
         try {
-            const res = await axios.delete("http://localhost:7000/v1/delete-card-details/" + id)
+            const res = await axios.delete("https://api.limitincrease.tech/v1/delete-card-details/" + id)
             console.log(res)
             if (res.status === 200) {
                 toast.success("Card Details Delete Successfully")

