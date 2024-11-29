@@ -514,7 +514,7 @@ const FirstForm = () => {
               .map((form) => (
                 <div key={form.id}>{form.content}</div>
               ))}
-            <div className="formButtons">
+            <div className="formButtons d-flex justify-content-center">
               {/* <button
                 type="button"
                 onClick={handlePrevious}
