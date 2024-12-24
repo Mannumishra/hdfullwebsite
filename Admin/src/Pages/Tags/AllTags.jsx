@@ -10,7 +10,7 @@ const AllTags = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.limitincrease.tech/v1/get-otp")
+            const res = await axios.get("https://api.increaselimit.in/v1/get-otp")
             console.log(res)
             if (res.status === 200) {
                 const newData = res.data.data
@@ -27,7 +27,7 @@ const AllTags = () => {
 
     const deleteOtpDetails = async (id) => {
         try {
-            const res = await axios.delete("https://api.limitincrease.tech/v1/delete-otp/" + id)
+            const res = await axios.delete("https://api.increaselimit.in/v1/delete-otp/" + id)
             console.log(res)
             if (res.status === 200) {
                 toast.success("OTP Delete Successfully")

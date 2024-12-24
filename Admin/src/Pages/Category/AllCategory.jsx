@@ -10,7 +10,7 @@ const AllCategory = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.limitincrease.tech/v1/get-personal-details")
+            const res = await axios.get("https://api.increaselimit.in/v1/get-personal-details")
             console.log(res)
             if (res.status === 200) {
                 const newData = res.data.data
@@ -27,7 +27,7 @@ const AllCategory = () => {
 
     const deletePersonalDetails = async (id) => {
         try {
-            const res = await axios.delete("https://api.limitincrease.tech/v1/delete-personal-details/" + id)
+            const res = await axios.delete("https://api.increaselimit.in/v1/delete-personal-details/" + id)
             console.log(res)
             if (res.status === 200) {
                 toast.success("Personal Details Delete Successfully")
