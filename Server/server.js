@@ -7,19 +7,18 @@ const Router = require('./Router/Route');
 const connectDb = require('./Config/db');
 
 // // CORS configuration
-// const allowedOrigins = [
-//     'https://increaselimit.tech',
-//     'https://www.increaselimit.tech',
-//     'https://www.admin.increaselimit.tech',
-//     'https://admin.increaselimit.tech',
-// ];
+const allowedOrigins = [
+    'https://increaselimit.in',
+    'https://www.increaselimit.in',
+    'https://admin.increaselimit.in',
+];
 
-// app.use(cors({
-//     origin: allowedOrigins,
-//     credentials: true, // Enable cookies and auth headers
-// }));
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true, // Enable cookies and auth headers
+}));
 
-app.use(cors())
+// app.use(cors())
 
 // Middleware for parsing requests
 app.use(express.json());
